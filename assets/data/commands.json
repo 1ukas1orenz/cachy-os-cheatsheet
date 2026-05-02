@@ -1,0 +1,917 @@
+{
+  "categories": [
+    {
+      "key": "pacman",
+      "title": "Pacman",
+      "icon": "📦",
+      "color": "#1793d1",
+      "commands": [
+        {
+          "command": "sudo pacman -Syu",
+          "searchDescription": "update upgrade all packages full system update",
+          "codeHtml": "<span class='cmd-keyword'>sudo</span> pacman <span class='cmd-flag'>-Syu</span>",
+          "descriptionHtml": "Synchronize repositories and upgrade all packages (full system update).",
+          "danger": false
+        },
+        {
+          "command": "sudo pacman -S package",
+          "searchDescription": "install package",
+          "codeHtml": "<span class='cmd-keyword'>sudo</span> pacman <span class='cmd-flag'>-S</span> <span class='cmd-arg'>&lt;package&gt;</span>",
+          "descriptionHtml": "Install a package from the official repositories.",
+          "danger": false
+        },
+        {
+          "command": "sudo pacman -R package",
+          "searchDescription": "remove uninstall package",
+          "codeHtml": "<span class='cmd-keyword'>sudo</span> pacman <span class='cmd-flag'>-R</span> <span class='cmd-arg'>&lt;package&gt;</span>",
+          "descriptionHtml": "Remove a package but keep its dependencies.",
+          "danger": false
+        },
+        {
+          "command": "sudo pacman -Rs package",
+          "searchDescription": "remove uninstall package with dependencies",
+          "codeHtml": "<span class='cmd-keyword'>sudo</span> pacman <span class='cmd-flag'>-Rs</span> <span class='cmd-arg'>&lt;package&gt;</span>",
+          "descriptionHtml": "Remove a package and its unused dependencies.",
+          "danger": false
+        },
+        {
+          "command": "sudo pacman -Rns package",
+          "searchDescription": "remove package dependencies config files",
+          "codeHtml": "<span class='cmd-keyword'>sudo</span> pacman <span class='cmd-flag'>-Rns</span> <span class='cmd-arg'>&lt;package&gt;</span>",
+          "descriptionHtml": "Remove a package, its unused dependencies, and config files.",
+          "danger": true
+        },
+        {
+          "command": "pacman -Ss keyword",
+          "searchDescription": "search package repositories",
+          "codeHtml": "pacman <span class='cmd-flag'>-Ss</span> <span class='cmd-arg'>&lt;keyword&gt;</span>",
+          "descriptionHtml": "Search for a package in the remote repositories.",
+          "danger": false
+        },
+        {
+          "command": "pacman -Qs keyword",
+          "searchDescription": "search installed packages local",
+          "codeHtml": "pacman <span class='cmd-flag'>-Qs</span> <span class='cmd-arg'>&lt;keyword&gt;</span>",
+          "descriptionHtml": "Search among locally installed packages.",
+          "danger": false
+        },
+        {
+          "command": "pacman -Qi package",
+          "searchDescription": "package info details installed",
+          "codeHtml": "pacman <span class='cmd-flag'>-Qi</span> <span class='cmd-arg'>&lt;package&gt;</span>",
+          "descriptionHtml": "Display detailed information about an installed package.",
+          "danger": false
+        },
+        {
+          "command": "pacman -Si package",
+          "searchDescription": "package info details remote",
+          "codeHtml": "pacman <span class='cmd-flag'>-Si</span> <span class='cmd-arg'>&lt;package&gt;</span>",
+          "descriptionHtml": "Display detailed information about a remote package.",
+          "danger": false
+        },
+        {
+          "command": "pacman -Ql package",
+          "searchDescription": "list files owned by package",
+          "codeHtml": "pacman <span class='cmd-flag'>-Ql</span> <span class='cmd-arg'>&lt;package&gt;</span>",
+          "descriptionHtml": "List all files installed by a package.",
+          "danger": false
+        },
+        {
+          "command": "pacman -Qo /path/to/file",
+          "searchDescription": "which package owns file",
+          "codeHtml": "pacman <span class='cmd-flag'>-Qo</span> <span class='cmd-arg'>/path/to/file</span>",
+          "descriptionHtml": "Find out which package owns a specific file.",
+          "danger": false
+        },
+        {
+          "command": "pacman -Qdt",
+          "searchDescription": "list orphans unused dependencies",
+          "codeHtml": "pacman <span class='cmd-flag'>-Qdt</span>",
+          "descriptionHtml": "List all orphaned packages (installed as dependencies, no longer needed).",
+          "danger": false
+        },
+        {
+          "command": "sudo pacman -Rns $(pacman -Qdtq)",
+          "searchDescription": "remove orphans unused dependencies clean",
+          "codeHtml": "<span class='cmd-keyword'>sudo</span> pacman <span class='cmd-flag'>-Rns</span> <span class='cmd-arg'>$(pacman -Qdtq)</span>",
+          "descriptionHtml": "Remove all orphaned packages and their config files.",
+          "danger": true
+        },
+        {
+          "command": "sudo pacman -Sc",
+          "searchDescription": "clean package cache",
+          "codeHtml": "<span class='cmd-keyword'>sudo</span> pacman <span class='cmd-flag'>-Sc</span>",
+          "descriptionHtml": "Remove old packages from the package cache.",
+          "danger": false
+        },
+        {
+          "command": "sudo pacman -Scc",
+          "searchDescription": "clean all package cache",
+          "codeHtml": "<span class='cmd-keyword'>sudo</span> pacman <span class='cmd-flag'>-Scc</span>",
+          "descriptionHtml": "Remove all cached packages from the cache directory.",
+          "danger": true
+        },
+        {
+          "command": "sudo pacman -U package.pkg.tar.zst",
+          "searchDescription": "install local package file",
+          "codeHtml": "<span class='cmd-keyword'>sudo</span> pacman <span class='cmd-flag'>-U</span> <span class='cmd-arg'>&lt;package.pkg.tar.zst&gt;</span>",
+          "descriptionHtml": "Install a package from a local file.",
+          "danger": false
+        },
+        {
+          "command": "sudo pacman -Sy",
+          "searchDescription": "sync refresh repositories",
+          "codeHtml": "<span class='cmd-keyword'>sudo</span> pacman <span class='cmd-flag'>-Sy</span>",
+          "descriptionHtml": "Synchronize (refresh) the package database.",
+          "danger": false
+        },
+        {
+          "command": "pacman -Qu",
+          "searchDescription": "list upgradable outdated packages",
+          "codeHtml": "pacman <span class='cmd-flag'>-Qu</span>",
+          "descriptionHtml": "List all packages with available upgrades.",
+          "danger": false
+        }
+      ]
+    },
+    {
+      "key": "aur",
+      "title": "AUR (paru / yay)",
+      "icon": "🔮",
+      "color": "#a78bfa",
+      "commands": [
+        {
+          "command": "paru -Syu",
+          "searchDescription": "paru update upgrade all packages aur",
+          "codeHtml": "<span class='cmd-keyword'>paru</span> <span class='cmd-flag'>-Syu</span>",
+          "descriptionHtml": "Update all packages including AUR packages with paru.",
+          "danger": false
+        },
+        {
+          "command": "paru -S package",
+          "searchDescription": "paru install aur package",
+          "codeHtml": "<span class='cmd-keyword'>paru</span> <span class='cmd-flag'>-S</span> <span class='cmd-arg'>&lt;package&gt;</span>",
+          "descriptionHtml": "Install a package from the AUR or official repos with paru.",
+          "danger": false
+        },
+        {
+          "command": "paru -Ss keyword",
+          "searchDescription": "paru search aur packages",
+          "codeHtml": "<span class='cmd-keyword'>paru</span> <span class='cmd-flag'>-Ss</span> <span class='cmd-arg'>&lt;keyword&gt;</span>",
+          "descriptionHtml": "Search for a package in AUR and official repositories.",
+          "danger": false
+        },
+        {
+          "command": "paru --fm nano -S package",
+          "searchDescription": "paru edit PKGBUILD before build",
+          "codeHtml": "<span class='cmd-keyword'>paru</span> <span class='cmd-flag'>--fm</span> <span class='cmd-arg'>nano</span> <span class='cmd-flag'>-S</span> <span class='cmd-arg'>&lt;package&gt;</span>",
+          "descriptionHtml": "Install from AUR and open PKGBUILD in nano before building.",
+          "danger": false
+        },
+        {
+          "command": "yay -Syu",
+          "searchDescription": "yay update upgrade all aur",
+          "codeHtml": "<span class='cmd-keyword'>yay</span> <span class='cmd-flag'>-Syu</span>",
+          "descriptionHtml": "Update all packages including AUR packages with yay.",
+          "danger": false
+        },
+        {
+          "command": "yay -S package",
+          "searchDescription": "yay install aur package",
+          "codeHtml": "<span class='cmd-keyword'>yay</span> <span class='cmd-flag'>-S</span> <span class='cmd-arg'>&lt;package&gt;</span>",
+          "descriptionHtml": "Install a package from the AUR or official repos with yay.",
+          "danger": false
+        },
+        {
+          "command": "yay -Ss keyword",
+          "searchDescription": "yay search aur packages",
+          "codeHtml": "<span class='cmd-keyword'>yay</span> <span class='cmd-flag'>-Ss</span> <span class='cmd-arg'>&lt;keyword&gt;</span>",
+          "descriptionHtml": "Search AUR and official repos for a package.",
+          "danger": false
+        },
+        {
+          "command": "paru -Gc package",
+          "searchDescription": "view aur comments package",
+          "codeHtml": "<span class='cmd-keyword'>paru</span> <span class='cmd-flag'>-Gc</span> <span class='cmd-arg'>&lt;package&gt;</span>",
+          "descriptionHtml": "View AUR comments for a package (paru only).",
+          "danger": false
+        }
+      ]
+    },
+    {
+      "key": "filesystem",
+      "title": "File System",
+      "icon": "📁",
+      "color": "#00ff9d",
+      "commands": [
+        {
+          "command": "ls -la",
+          "searchDescription": "list files directory hidden permissions",
+          "codeHtml": "<span class='cmd-keyword'>ls</span> <span class='cmd-flag'>-la</span>",
+          "descriptionHtml": "List all files (including hidden) with detailed permissions and metadata.",
+          "danger": false
+        },
+        {
+          "command": "cd /path/to/dir",
+          "searchDescription": "change directory navigate",
+          "codeHtml": "<span class='cmd-keyword'>cd</span> <span class='cmd-arg'>/path/to/dir</span>",
+          "descriptionHtml": "Change the current working directory.",
+          "danger": false
+        },
+        {
+          "command": "pwd",
+          "searchDescription": "print working directory current path",
+          "codeHtml": "<span class='cmd-keyword'>pwd</span>",
+          "descriptionHtml": "Print the full path of the current working directory.",
+          "danger": false
+        },
+        {
+          "command": "mkdir -p /path/to/dir",
+          "searchDescription": "create directory folder make",
+          "codeHtml": "<span class='cmd-keyword'>mkdir</span> <span class='cmd-flag'>-p</span> <span class='cmd-arg'>/path/to/dir</span>",
+          "descriptionHtml": "Create a directory and all parent directories as needed.",
+          "danger": false
+        },
+        {
+          "command": "cp -r source dest",
+          "searchDescription": "copy file directory recursive",
+          "codeHtml": "<span class='cmd-keyword'>cp</span> <span class='cmd-flag'>-r</span> <span class='cmd-arg'>source dest</span>",
+          "descriptionHtml": "Copy a file or directory recursively to the destination.",
+          "danger": false
+        },
+        {
+          "command": "mv source dest",
+          "searchDescription": "move rename file directory",
+          "codeHtml": "<span class='cmd-keyword'>mv</span> <span class='cmd-arg'>source dest</span>",
+          "descriptionHtml": "Move or rename a file or directory.",
+          "danger": false
+        },
+        {
+          "command": "rm -rf /path",
+          "searchDescription": "remove delete directory force recursive",
+          "codeHtml": "<span class='cmd-keyword'>rm</span> <span class='cmd-flag'>-rf</span> <span class='cmd-arg'>/path</span>",
+          "descriptionHtml": "Forcefully remove a file or directory and all its contents. Irreversible!",
+          "danger": true
+        },
+        {
+          "command": "touch filename",
+          "searchDescription": "create empty file update timestamp",
+          "codeHtml": "<span class='cmd-keyword'>touch</span> <span class='cmd-arg'>filename</span>",
+          "descriptionHtml": "Create an empty file or update the timestamp of an existing one.",
+          "danger": false
+        },
+        {
+          "command": "ln -s /target /link",
+          "searchDescription": "symlink symbolic link create",
+          "codeHtml": "<span class='cmd-keyword'>ln</span> <span class='cmd-flag'>-s</span> <span class='cmd-arg'>/target /link</span>",
+          "descriptionHtml": "Create a symbolic link pointing to the target.",
+          "danger": false
+        },
+        {
+          "command": "tree -L 2",
+          "searchDescription": "show directory tree structure",
+          "codeHtml": "<span class='cmd-keyword'>tree</span> <span class='cmd-flag'>-L</span> <span class='cmd-arg'>2</span>",
+          "descriptionHtml": "Show the directory structure as a tree, 2 levels deep.",
+          "danger": false
+        },
+        {
+          "command": "du -sh /path",
+          "searchDescription": "disk usage directory size",
+          "codeHtml": "<span class='cmd-keyword'>du</span> <span class='cmd-flag'>-sh</span> <span class='cmd-arg'>/path</span>",
+          "descriptionHtml": "Show total disk usage of a directory in human-readable form.",
+          "danger": false
+        },
+        {
+          "command": "df -h",
+          "searchDescription": "disk free space filesystem mounted",
+          "codeHtml": "<span class='cmd-keyword'>df</span> <span class='cmd-flag'>-h</span>",
+          "descriptionHtml": "Show disk space usage of all mounted filesystems.",
+          "danger": false
+        }
+      ]
+    },
+    {
+      "key": "system",
+      "title": "System & Hardware",
+      "icon": "🖥️",
+      "color": "#00cfff",
+      "commands": [
+        {
+          "command": "uname -a",
+          "searchDescription": "kernel version system info",
+          "codeHtml": "<span class='cmd-keyword'>uname</span> <span class='cmd-flag'>-a</span>",
+          "descriptionHtml": "Print all system information: kernel, hostname, OS, architecture.",
+          "danger": false
+        },
+        {
+          "command": "hostnamectl",
+          "searchDescription": "hostname system info os distro",
+          "codeHtml": "<span class='cmd-keyword'>hostnamectl</span>",
+          "descriptionHtml": "Show system hostname, kernel, OS, and architecture details.",
+          "danger": false
+        },
+        {
+          "command": "lscpu",
+          "searchDescription": "cpu info processor architecture cores",
+          "codeHtml": "<span class='cmd-keyword'>lscpu</span>",
+          "descriptionHtml": "Display detailed CPU architecture and core information.",
+          "danger": false
+        },
+        {
+          "command": "free -h",
+          "searchDescription": "ram memory usage available free",
+          "codeHtml": "<span class='cmd-keyword'>free</span> <span class='cmd-flag'>-h</span>",
+          "descriptionHtml": "Show RAM and swap usage in human-readable format.",
+          "danger": false
+        },
+        {
+          "command": "lsblk",
+          "searchDescription": "list block devices disks partitions",
+          "codeHtml": "<span class='cmd-keyword'>lsblk</span>",
+          "descriptionHtml": "List all block devices (disks and partitions) with their mount points.",
+          "danger": false
+        },
+        {
+          "command": "lspci",
+          "searchDescription": "pci devices hardware gpu network",
+          "codeHtml": "<span class='cmd-keyword'>lspci</span>",
+          "descriptionHtml": "List all PCI devices (GPU, network cards, etc.).",
+          "danger": false
+        },
+        {
+          "command": "lsusb",
+          "searchDescription": "usb devices list connected",
+          "codeHtml": "<span class='cmd-keyword'>lsusb</span>",
+          "descriptionHtml": "List all USB devices currently connected to the system.",
+          "danger": false
+        },
+        {
+          "command": "inxi -Fxz",
+          "searchDescription": "full system info hardware summary inxi",
+          "codeHtml": "<span class='cmd-keyword'>inxi</span> <span class='cmd-flag'>-Fxz</span>",
+          "descriptionHtml": "Display a full, detailed hardware and software system summary.",
+          "danger": false
+        },
+        {
+          "command": "sudo dmesg | tail -50",
+          "searchDescription": "kernel messages log boot hardware errors",
+          "codeHtml": "<span class='cmd-keyword'>sudo</span> dmesg <span class='cmd-flag'>|</span> tail <span class='cmd-flag'>-50</span>",
+          "descriptionHtml": "Show the last 50 kernel log messages (useful for hardware debugging).",
+          "danger": false
+        },
+        {
+          "command": "sudo systemctl reboot",
+          "searchDescription": "reboot restart system",
+          "codeHtml": "<span class='cmd-keyword'>sudo</span> systemctl <span class='cmd-flag'>reboot</span>",
+          "descriptionHtml": "Reboot the system immediately.",
+          "danger": true
+        },
+        {
+          "command": "sudo systemctl poweroff",
+          "searchDescription": "shutdown poweroff halt system",
+          "codeHtml": "<span class='cmd-keyword'>sudo</span> systemctl <span class='cmd-flag'>poweroff</span>",
+          "descriptionHtml": "Shut down and power off the system.",
+          "danger": true
+        },
+        {
+          "command": "timedatectl",
+          "searchDescription": "time date timezone ntp",
+          "codeHtml": "<span class='cmd-keyword'>timedatectl</span>",
+          "descriptionHtml": "Show or set the system time, date, and timezone.",
+          "danger": false
+        }
+      ]
+    },
+    {
+      "key": "process",
+      "title": "Process Management",
+      "icon": "⚙️",
+      "color": "#ff9f43",
+      "commands": [
+        {
+          "command": "htop",
+          "searchDescription": "interactive process viewer monitor cpu memory",
+          "codeHtml": "<span class='cmd-keyword'>htop</span>",
+          "descriptionHtml": "Interactive process viewer — shows CPU, RAM usage per process.",
+          "danger": false
+        },
+        {
+          "command": "ps aux",
+          "searchDescription": "list all running processes",
+          "codeHtml": "<span class='cmd-keyword'>ps</span> <span class='cmd-flag'>aux</span>",
+          "descriptionHtml": "List all currently running processes with user, PID, CPU/RAM.",
+          "danger": false
+        },
+        {
+          "command": "ps aux | grep process",
+          "searchDescription": "find process by name grep",
+          "codeHtml": "<span class='cmd-keyword'>ps</span> <span class='cmd-flag'>aux</span> <span class='cmd-flag'>|</span> grep <span class='cmd-arg'>&lt;process&gt;</span>",
+          "descriptionHtml": "Search for a running process by name.",
+          "danger": false
+        },
+        {
+          "command": "kill -9 PID",
+          "searchDescription": "kill force stop process pid",
+          "codeHtml": "<span class='cmd-keyword'>kill</span> <span class='cmd-flag'>-9</span> <span class='cmd-arg'>&lt;PID&gt;</span>",
+          "descriptionHtml": "Forcefully terminate a process by its PID. Use with caution!",
+          "danger": true
+        },
+        {
+          "command": "killall process",
+          "searchDescription": "kill all instances process name",
+          "codeHtml": "<span class='cmd-keyword'>killall</span> <span class='cmd-arg'>&lt;process&gt;</span>",
+          "descriptionHtml": "Kill all running instances of a process by name.",
+          "danger": true
+        },
+        {
+          "command": "systemctl status service",
+          "searchDescription": "service status check running systemd",
+          "codeHtml": "<span class='cmd-keyword'>systemctl</span> <span class='cmd-flag'>status</span> <span class='cmd-arg'>&lt;service&gt;</span>",
+          "descriptionHtml": "Check the status of a systemd service.",
+          "danger": false
+        },
+        {
+          "command": "sudo systemctl start service",
+          "searchDescription": "start service systemd",
+          "codeHtml": "<span class='cmd-keyword'>sudo</span> systemctl <span class='cmd-flag'>start</span> <span class='cmd-arg'>&lt;service&gt;</span>",
+          "descriptionHtml": "Start a systemd service.",
+          "danger": false
+        },
+        {
+          "command": "sudo systemctl stop service",
+          "searchDescription": "stop service systemd",
+          "codeHtml": "<span class='cmd-keyword'>sudo</span> systemctl <span class='cmd-flag'>stop</span> <span class='cmd-arg'>&lt;service&gt;</span>",
+          "descriptionHtml": "Stop a running systemd service.",
+          "danger": false
+        },
+        {
+          "command": "sudo systemctl restart service",
+          "searchDescription": "restart reload service systemd",
+          "codeHtml": "<span class='cmd-keyword'>sudo</span> systemctl <span class='cmd-flag'>restart</span> <span class='cmd-arg'>&lt;service&gt;</span>",
+          "descriptionHtml": "Restart a systemd service.",
+          "danger": false
+        },
+        {
+          "command": "sudo systemctl enable --now service",
+          "searchDescription": "enable service on boot autostart systemd",
+          "codeHtml": "<span class='cmd-keyword'>sudo</span> systemctl <span class='cmd-flag'>enable --now</span> <span class='cmd-arg'>&lt;service&gt;</span>",
+          "descriptionHtml": "Enable a service to start at boot and start it immediately.",
+          "danger": false
+        },
+        {
+          "command": "sudo systemctl disable service",
+          "searchDescription": "disable service autostart boot systemd",
+          "codeHtml": "<span class='cmd-keyword'>sudo</span> systemctl <span class='cmd-flag'>disable</span> <span class='cmd-arg'>&lt;service&gt;</span>",
+          "descriptionHtml": "Disable a service from starting at boot.",
+          "danger": false
+        },
+        {
+          "command": "journalctl -xe",
+          "searchDescription": "systemd journal log errors recent",
+          "codeHtml": "<span class='cmd-keyword'>journalctl</span> <span class='cmd-flag'>-xe</span>",
+          "descriptionHtml": "Show the most recent systemd journal logs with explanations.",
+          "danger": false
+        },
+        {
+          "command": "journalctl -u service -f",
+          "searchDescription": "follow service log live systemd journal",
+          "codeHtml": "<span class='cmd-keyword'>journalctl</span> <span class='cmd-flag'>-u</span> <span class='cmd-arg'>&lt;service&gt;</span> <span class='cmd-flag'>-f</span>",
+          "descriptionHtml": "Follow live log output of a specific systemd service.",
+          "danger": false
+        }
+      ]
+    },
+    {
+      "key": "network",
+      "title": "Network",
+      "icon": "🌐",
+      "color": "#ffd166",
+      "commands": [
+        {
+          "command": "ip a",
+          "searchDescription": "ip address network interfaces show",
+          "codeHtml": "<span class='cmd-keyword'>ip</span> <span class='cmd-flag'>a</span>",
+          "descriptionHtml": "Show all network interfaces and their IP addresses.",
+          "danger": false
+        },
+        {
+          "command": "ip r",
+          "searchDescription": "routing table gateway network routes",
+          "codeHtml": "<span class='cmd-keyword'>ip</span> <span class='cmd-flag'>r</span>",
+          "descriptionHtml": "Display the IP routing table (shows default gateway etc.).",
+          "danger": false
+        },
+        {
+          "command": "ping -c 4 host",
+          "searchDescription": "ping test connectivity host",
+          "codeHtml": "<span class='cmd-keyword'>ping</span> <span class='cmd-flag'>-c 4</span> <span class='cmd-arg'>&lt;host&gt;</span>",
+          "descriptionHtml": "Send 4 ICMP packets to a host to test connectivity.",
+          "danger": false
+        },
+        {
+          "command": "curl -I https://example.com",
+          "searchDescription": "http headers request curl check",
+          "codeHtml": "<span class='cmd-keyword'>curl</span> <span class='cmd-flag'>-I</span> <span class='cmd-arg'>https://example.com</span>",
+          "descriptionHtml": "Fetch and display HTTP response headers from a URL.",
+          "danger": false
+        },
+        {
+          "command": "wget https://example.com/file",
+          "searchDescription": "download file wget http",
+          "codeHtml": "<span class='cmd-keyword'>wget</span> <span class='cmd-arg'>https://example.com/file</span>",
+          "descriptionHtml": "Download a file from the internet.",
+          "danger": false
+        },
+        {
+          "command": "ss -tulnp",
+          "searchDescription": "open ports listening sockets network",
+          "codeHtml": "<span class='cmd-keyword'>ss</span> <span class='cmd-flag'>-tulnp</span>",
+          "descriptionHtml": "Show all listening TCP/UDP ports with associated processes.",
+          "danger": false
+        },
+        {
+          "command": "nmcli device wifi list",
+          "searchDescription": "wifi networks list scan nmcli",
+          "codeHtml": "<span class='cmd-keyword'>nmcli</span> device wifi <span class='cmd-flag'>list</span>",
+          "descriptionHtml": "List all available Wi-Fi networks.",
+          "danger": false
+        },
+        {
+          "command": "nmcli device wifi connect SSID password PASS",
+          "searchDescription": "connect wifi network nmcli password",
+          "codeHtml": "<span class='cmd-keyword'>nmcli</span> device wifi connect <span class='cmd-arg'>&lt;SSID&gt;</span> password <span class='cmd-arg'>&lt;PASS&gt;</span>",
+          "descriptionHtml": "Connect to a Wi-Fi network using NetworkManager CLI.",
+          "danger": false
+        },
+        {
+          "command": "traceroute host",
+          "searchDescription": "traceroute trace path hops network",
+          "codeHtml": "<span class='cmd-keyword'>traceroute</span> <span class='cmd-arg'>&lt;host&gt;</span>",
+          "descriptionHtml": "Trace the network path (hops) to a remote host.",
+          "danger": false
+        },
+        {
+          "command": "dig domain",
+          "searchDescription": "dns lookup query dig domain",
+          "codeHtml": "<span class='cmd-keyword'>dig</span> <span class='cmd-arg'>&lt;domain&gt;</span>",
+          "descriptionHtml": "Query DNS records for a domain.",
+          "danger": false
+        },
+        {
+          "command": "ssh user@host",
+          "searchDescription": "ssh remote login connect",
+          "codeHtml": "<span class='cmd-keyword'>ssh</span> <span class='cmd-arg'>&lt;user&gt;@&lt;host&gt;</span>",
+          "descriptionHtml": "Connect to a remote host via SSH.",
+          "danger": false
+        },
+        {
+          "command": "scp file user@host:/remote/path",
+          "searchDescription": "scp copy file remote ssh transfer",
+          "codeHtml": "<span class='cmd-keyword'>scp</span> <span class='cmd-arg'>&lt;file&gt;</span> <span class='cmd-arg'>&lt;user&gt;@&lt;host&gt;:/remote/path</span>",
+          "descriptionHtml": "Securely copy a file to a remote host over SSH.",
+          "danger": false
+        }
+      ]
+    },
+    {
+      "key": "permissions",
+      "title": "Users & Permissions",
+      "icon": "🔐",
+      "color": "#ff5f5f",
+      "commands": [
+        {
+          "command": "chmod 755 file",
+          "searchDescription": "change permissions chmod file",
+          "codeHtml": "<span class='cmd-keyword'>chmod</span> <span class='cmd-flag'>755</span> <span class='cmd-arg'>file</span>",
+          "descriptionHtml": "Set file permissions to rwxr-xr-x (owner: rwx, group/others: r-x).",
+          "danger": false
+        },
+        {
+          "command": "chmod -R 755 /dir",
+          "searchDescription": "change permissions recursive directory chmod",
+          "codeHtml": "<span class='cmd-keyword'>chmod</span> <span class='cmd-flag'>-R 755</span> <span class='cmd-arg'>/dir</span>",
+          "descriptionHtml": "Recursively change permissions of all files in a directory.",
+          "danger": false
+        },
+        {
+          "command": "chown user:group file",
+          "searchDescription": "change owner group file chown",
+          "codeHtml": "<span class='cmd-keyword'>chown</span> <span class='cmd-arg'>&lt;user&gt;:&lt;group&gt; file</span>",
+          "descriptionHtml": "Change the owner and group of a file or directory.",
+          "danger": false
+        },
+        {
+          "command": "sudo chown -R user:group /dir",
+          "searchDescription": "change owner recursive directory chown",
+          "codeHtml": "<span class='cmd-keyword'>sudo chown</span> <span class='cmd-flag'>-R</span> <span class='cmd-arg'>&lt;user&gt;:&lt;group&gt; /dir</span>",
+          "descriptionHtml": "Recursively change owner and group of a directory.",
+          "danger": true
+        },
+        {
+          "command": "whoami",
+          "searchDescription": "current user who logged in",
+          "codeHtml": "<span class='cmd-keyword'>whoami</span>",
+          "descriptionHtml": "Print the current logged-in username.",
+          "danger": false
+        },
+        {
+          "command": "id user",
+          "searchDescription": "user id uid gid groups",
+          "codeHtml": "<span class='cmd-keyword'>id</span> <span class='cmd-arg'>&lt;user&gt;</span>",
+          "descriptionHtml": "Show UID, GID, and all group memberships for a user.",
+          "danger": false
+        },
+        {
+          "command": "sudo useradd -m -G wheel username",
+          "searchDescription": "create new user add sudo wheel group",
+          "codeHtml": "<span class='cmd-keyword'>sudo</span> useradd <span class='cmd-flag'>-m -G wheel</span> <span class='cmd-arg'>&lt;username&gt;</span>",
+          "descriptionHtml": "Create a new user with a home directory and add them to the wheel (sudo) group.",
+          "danger": false
+        },
+        {
+          "command": "sudo passwd username",
+          "searchDescription": "change password user passwd",
+          "codeHtml": "<span class='cmd-keyword'>sudo</span> passwd <span class='cmd-arg'>&lt;username&gt;</span>",
+          "descriptionHtml": "Change the password of a user.",
+          "danger": false
+        },
+        {
+          "command": "sudo usermod -aG group user",
+          "searchDescription": "add user to group usermod",
+          "codeHtml": "<span class='cmd-keyword'>sudo</span> usermod <span class='cmd-flag'>-aG</span> <span class='cmd-arg'>&lt;group&gt; &lt;user&gt;</span>",
+          "descriptionHtml": "Add a user to a supplementary group without removing existing groups.",
+          "danger": false
+        },
+        {
+          "command": "sudo visudo",
+          "searchDescription": "edit sudoers file sudo permissions",
+          "codeHtml": "<span class='cmd-keyword'>sudo</span> visudo",
+          "descriptionHtml": "Safely edit the /etc/sudoers file to manage sudo privileges.",
+          "danger": true
+        }
+      ]
+    },
+    {
+      "key": "text",
+      "title": "Text & Search",
+      "icon": "🔍",
+      "color": "#00cfff",
+      "commands": [
+        {
+          "command": "cat file",
+          "searchDescription": "print file contents cat",
+          "codeHtml": "<span class='cmd-keyword'>cat</span> <span class='cmd-arg'>file</span>",
+          "descriptionHtml": "Print the contents of a file to the terminal.",
+          "danger": false
+        },
+        {
+          "command": "less file",
+          "searchDescription": "view file pager scroll less",
+          "codeHtml": "<span class='cmd-keyword'>less</span> <span class='cmd-arg'>file</span>",
+          "descriptionHtml": "View a file with scrolling support (q to quit, / to search).",
+          "danger": false
+        },
+        {
+          "command": "grep -r 'pattern' /path",
+          "searchDescription": "search text pattern recursive grep",
+          "codeHtml": "<span class='cmd-keyword'>grep</span> <span class='cmd-flag'>-r</span> <span class='cmd-arg'>'pattern' /path</span>",
+          "descriptionHtml": "Recursively search for a text pattern in all files under a path.",
+          "danger": false
+        },
+        {
+          "command": "grep -rn 'pattern' /path",
+          "searchDescription": "search text pattern with line numbers grep",
+          "codeHtml": "<span class='cmd-keyword'>grep</span> <span class='cmd-flag'>-rn</span> <span class='cmd-arg'>'pattern' /path</span>",
+          "descriptionHtml": "Recursively search and show matching line numbers.",
+          "danger": false
+        },
+        {
+          "command": "find /path -name 'filename'",
+          "searchDescription": "find file name search locate",
+          "codeHtml": "<span class='cmd-keyword'>find</span> <span class='cmd-arg'>/path</span> <span class='cmd-flag'>-name</span> <span class='cmd-arg'>'filename'</span>",
+          "descriptionHtml": "Find files matching a name pattern under a given path.",
+          "danger": false
+        },
+        {
+          "command": "find /path -type f -mtime -7",
+          "searchDescription": "find files modified recently last 7 days",
+          "codeHtml": "<span class='cmd-keyword'>find</span> <span class='cmd-arg'>/path</span> <span class='cmd-flag'>-type f -mtime -7</span>",
+          "descriptionHtml": "Find all files modified in the last 7 days.",
+          "danger": false
+        },
+        {
+          "command": "sed -i 's/old/new/g' file",
+          "searchDescription": "replace string text in file sed",
+          "codeHtml": "<span class='cmd-keyword'>sed</span> <span class='cmd-flag'>-i</span> <span class='cmd-arg'>'s/old/new/g' file</span>",
+          "descriptionHtml": "Replace all occurrences of 'old' with 'new' in a file in-place.",
+          "danger": false
+        },
+        {
+          "command": "awk '{print $1}' file",
+          "searchDescription": "awk print column field text processing",
+          "codeHtml": "<span class='cmd-keyword'>awk</span> <span class='cmd-arg'>'{print $1}' file</span>",
+          "descriptionHtml": "Print the first column/field from each line of a file.",
+          "danger": false
+        },
+        {
+          "command": "tail -f /var/log/file",
+          "searchDescription": "follow log file tail real time",
+          "codeHtml": "<span class='cmd-keyword'>tail</span> <span class='cmd-flag'>-f</span> <span class='cmd-arg'>/var/log/file</span>",
+          "descriptionHtml": "Continuously follow and display new lines appended to a log file.",
+          "danger": false
+        },
+        {
+          "command": "head -n 20 file",
+          "searchDescription": "first lines file head",
+          "codeHtml": "<span class='cmd-keyword'>head</span> <span class='cmd-flag'>-n 20</span> <span class='cmd-arg'>file</span>",
+          "descriptionHtml": "Print the first 20 lines of a file.",
+          "danger": false
+        },
+        {
+          "command": "sort file | uniq -c | sort -rn",
+          "searchDescription": "sort unique count occurrences lines",
+          "codeHtml": "<span class='cmd-keyword'>sort</span> <span class='cmd-arg'>file</span> <span class='cmd-flag'>|</span> uniq <span class='cmd-flag'>-c</span> <span class='cmd-flag'>|</span> sort <span class='cmd-flag'>-rn</span>",
+          "descriptionHtml": "Count and sort unique occurrences of lines in a file.",
+          "danger": false
+        },
+        {
+          "command": "wc -l file",
+          "searchDescription": "count lines words file wc",
+          "codeHtml": "<span class='cmd-keyword'>wc</span> <span class='cmd-flag'>-l</span> <span class='cmd-arg'>file</span>",
+          "descriptionHtml": "Count the number of lines in a file.",
+          "danger": false
+        }
+      ]
+    },
+    {
+      "key": "cachy",
+      "title": "CachyOS Specific",
+      "icon": "🚀",
+      "color": "#f6a31c",
+      "commands": [
+        {
+          "command": "cachyos-hello",
+          "searchDescription": "cachyos welcome app setup gui",
+          "codeHtml": "<span class='cmd-keyword'>cachyos-hello</span>",
+          "descriptionHtml": "Open the CachyOS Hello welcome app for post-install setup.",
+          "danger": false
+        },
+        {
+          "command": "sudo pacman -S linux-cachyos",
+          "searchDescription": "install cachy kernel linux-cachyos",
+          "codeHtml": "<span class='cmd-keyword'>sudo</span> pacman <span class='cmd-flag'>-S</span> <span class='cmd-arg'>linux-cachyos</span>",
+          "descriptionHtml": "Install the default CachyOS optimized kernel.",
+          "danger": false
+        },
+        {
+          "command": "sudo pacman -S linux-cachyos-bore",
+          "searchDescription": "install bore scheduler kernel cachyos",
+          "codeHtml": "<span class='cmd-keyword'>sudo</span> pacman <span class='cmd-flag'>-S</span> <span class='cmd-arg'>linux-cachyos-bore</span>",
+          "descriptionHtml": "Install the CachyOS kernel with the BORE scheduler for desktop responsiveness.",
+          "danger": false
+        },
+        {
+          "command": "sudo pacman -S linux-cachyos-eevdf",
+          "searchDescription": "install eevdf scheduler kernel cachyos",
+          "codeHtml": "<span class='cmd-keyword'>sudo</span> pacman <span class='cmd-flag'>-S</span> <span class='cmd-arg'>linux-cachyos-eevdf</span>",
+          "descriptionHtml": "Install the CachyOS kernel with the EEVDF scheduler.",
+          "danger": false
+        },
+        {
+          "command": "sudo pacman -S cachyos-settings",
+          "searchDescription": "cachyos settings tweaks performance",
+          "codeHtml": "<span class='cmd-keyword'>sudo</span> pacman <span class='cmd-flag'>-S</span> <span class='cmd-arg'>cachyos-settings</span>",
+          "descriptionHtml": "Install CachyOS system settings/tweaks for performance optimization.",
+          "danger": false
+        },
+        {
+          "command": "sudo cachyos-rate-mirrors",
+          "searchDescription": "rate mirrors speed cachyos fastest mirror",
+          "codeHtml": "<span class='cmd-keyword'>sudo</span> cachyos-rate-mirrors",
+          "descriptionHtml": "Automatically rate and select the fastest CachyOS mirrors.",
+          "danger": false
+        },
+        {
+          "command": "sudo rate-mirrors --allow-root --protocol https arch | sudo tee /etc/pacman.d/mirrorlist",
+          "searchDescription": "rate arch mirrors fastest mirrorlist",
+          "codeHtml": "<span class='cmd-keyword'>sudo</span> rate-mirrors <span class='cmd-flag'>--allow-root --protocol https</span> arch <span class='cmd-flag'>|</span> <span class='cmd-keyword'>sudo</span> tee <span class='cmd-arg'>/etc/pacman.d/mirrorlist</span>",
+          "descriptionHtml": "Rate Arch mirrors by speed and write the sorted list to mirrorlist.",
+          "danger": false
+        },
+        {
+          "command": "sudo mkinitcpio -P",
+          "searchDescription": "rebuild initramfs all presets mkinitcpio",
+          "codeHtml": "<span class='cmd-keyword'>sudo</span> mkinitcpio <span class='cmd-flag'>-P</span>",
+          "descriptionHtml": "Regenerate all initramfs images (required after kernel/hook changes).",
+          "danger": false
+        },
+        {
+          "command": "sudo grub-mkconfig -o /boot/grub/grub.cfg",
+          "searchDescription": "update grub config regenerate bootloader",
+          "codeHtml": "<span class='cmd-keyword'>sudo</span> grub-mkconfig <span class='cmd-flag'>-o</span> <span class='cmd-arg'>/boot/grub/grub.cfg</span>",
+          "descriptionHtml": "Regenerate the GRUB configuration file (e.g., after kernel change).",
+          "danger": false
+        },
+        {
+          "command": "sudo bootctl update",
+          "searchDescription": "update systemd boot bootloader efi",
+          "codeHtml": "<span class='cmd-keyword'>sudo</span> bootctl <span class='cmd-flag'>update</span>",
+          "descriptionHtml": "Update the systemd-boot EFI bootloader.",
+          "danger": false
+        },
+        {
+          "command": "cat /sys/devices/system/cpu/cpu0/cpufreq/scaling_governor",
+          "searchDescription": "cpu governor performance powersave check",
+          "codeHtml": "<span class='cmd-keyword'>cat</span> <span class='cmd-arg'>/sys/devices/system/cpu/cpu0/cpufreq/scaling_governor</span>",
+          "descriptionHtml": "Check the current CPU frequency scaling governor.",
+          "danger": false
+        },
+        {
+          "command": "echo performance | sudo tee /sys/devices/system/cpu/cpu*/cpufreq/scaling_governor",
+          "searchDescription": "set cpu governor performance mode all cores",
+          "codeHtml": "<span class='cmd-keyword'>echo</span> <span class='cmd-arg'>performance</span> <span class='cmd-flag'>|</span> <span class='cmd-keyword'>sudo</span> tee <span class='cmd-arg'>/sys/devices/system/cpu/cpu*/cpufreq/scaling_governor</span>",
+          "descriptionHtml": "Set all CPU cores to 'performance' governor for maximum speed.",
+          "danger": false
+        },
+        {
+          "command": "sudo systemctl enable --now ananicy-cpp",
+          "searchDescription": "enable ananicy nice process priority autonice",
+          "codeHtml": "<span class='cmd-keyword'>sudo</span> systemctl <span class='cmd-flag'>enable --now</span> <span class='cmd-arg'>ananicy-cpp</span>",
+          "descriptionHtml": "Enable and start ananicy-cpp for automatic process priority management.",
+          "danger": false
+        },
+        {
+          "command": "sudo systemctl enable --now irqbalance",
+          "searchDescription": "enable irqbalance cpu interrupt balancing",
+          "codeHtml": "<span class='cmd-keyword'>sudo</span> systemctl <span class='cmd-flag'>enable --now</span> <span class='cmd-arg'>irqbalance</span>",
+          "descriptionHtml": "Enable IRQ balancing across CPU cores for better performance.",
+          "danger": false
+        },
+        {
+          "command": "sudo pacman -S cachy-browser",
+          "searchDescription": "install cachy browser firefox based",
+          "codeHtml": "<span class='cmd-keyword'>sudo</span> pacman <span class='cmd-flag'>-S</span> <span class='cmd-arg'>cachy-browser</span>",
+          "descriptionHtml": "Install Cachy Browser, a performance-optimized Firefox fork.",
+          "danger": false
+        }
+      ]
+    },
+    {
+      "key": "archive",
+      "title": "Archives & Compression",
+      "icon": "🗜️",
+      "color": "#94a3b8",
+      "commands": [
+        {
+          "command": "tar -czvf archive.tar.gz /path",
+          "searchDescription": "create tar archive gzip compress",
+          "codeHtml": "<span class='cmd-keyword'>tar</span> <span class='cmd-flag'>-czvf</span> <span class='cmd-arg'>archive.tar.gz /path</span>",
+          "descriptionHtml": "Create a gzip-compressed tar archive from a directory or file.",
+          "danger": false
+        },
+        {
+          "command": "tar -xzvf archive.tar.gz",
+          "searchDescription": "extract tar archive gzip decompress",
+          "codeHtml": "<span class='cmd-keyword'>tar</span> <span class='cmd-flag'>-xzvf</span> <span class='cmd-arg'>archive.tar.gz</span>",
+          "descriptionHtml": "Extract a gzip-compressed tar archive in the current directory.",
+          "danger": false
+        },
+        {
+          "command": "tar -xzvf archive.tar.gz -C /dest",
+          "searchDescription": "extract tar to specific directory",
+          "codeHtml": "<span class='cmd-keyword'>tar</span> <span class='cmd-flag'>-xzvf</span> <span class='cmd-arg'>archive.tar.gz</span> <span class='cmd-flag'>-C</span> <span class='cmd-arg'>/dest</span>",
+          "descriptionHtml": "Extract a tar archive into a specific destination directory.",
+          "danger": false
+        },
+        {
+          "command": "tar -cJvf archive.tar.xz /path",
+          "searchDescription": "create tar xz compressed archive",
+          "codeHtml": "<span class='cmd-keyword'>tar</span> <span class='cmd-flag'>-cJvf</span> <span class='cmd-arg'>archive.tar.xz /path</span>",
+          "descriptionHtml": "Create a highly-compressed XZ tar archive.",
+          "danger": false
+        },
+        {
+          "command": "zip -r archive.zip /path",
+          "searchDescription": "create zip archive compress",
+          "codeHtml": "<span class='cmd-keyword'>zip</span> <span class='cmd-flag'>-r</span> <span class='cmd-arg'>archive.zip /path</span>",
+          "descriptionHtml": "Create a ZIP archive from a file or directory.",
+          "danger": false
+        },
+        {
+          "command": "unzip archive.zip -d /dest",
+          "searchDescription": "extract unzip zip archive",
+          "codeHtml": "<span class='cmd-keyword'>unzip</span> <span class='cmd-arg'>archive.zip</span> <span class='cmd-flag'>-d</span> <span class='cmd-arg'>/dest</span>",
+          "descriptionHtml": "Extract a ZIP archive to a destination directory.",
+          "danger": false
+        },
+        {
+          "command": "7z x archive.7z",
+          "searchDescription": "extract 7zip archive 7z",
+          "codeHtml": "<span class='cmd-keyword'>7z</span> <span class='cmd-flag'>x</span> <span class='cmd-arg'>archive.7z</span>",
+          "descriptionHtml": "Extract a 7-Zip archive in the current directory.",
+          "danger": false
+        }
+      ]
+    }
+  ]
+}
