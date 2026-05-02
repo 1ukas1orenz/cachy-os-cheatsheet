@@ -63,7 +63,7 @@ cachy-linux-cheatsheet/
 ### Option 1 — Python (quickest)
 
 ```bash
-git clone https://github.com/1ukas1orenz/cachy-linux-cheatsheet.git
+git clone https://github.com/1ukas1orenz/cachy-os-cheatsheet.git
 cd cachy-linux-cheatsheet
 python3 -m http.server 8080
 ```
