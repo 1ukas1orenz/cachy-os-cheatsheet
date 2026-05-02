@@ -37,7 +37,7 @@
 ## 🗂️ Project Structure
 
 ```
-cachy-linux-cheatsheet/
+cachy-os-cheatsheet/
 ├── index.html                  # Main HTML entry point
 ├── README.md
 ├── preview.png
@@ -63,8 +63,8 @@ cachy-linux-cheatsheet/
 ### Option 1 — Python (quickest)
 
 ```bash
-git clone https://github.com/1ukas1orenz/cachy-linux-cheatsheet.git
-cd cachy-linux-cheatsheet
+git clone https://github.com/1ukas1orenz/cachy-os-cheatsheet.git
+cd cachy-os-cheatsheet
 python3 -m http.server 8080
 ```
 
@@ -81,7 +81,7 @@ npx serve .
 1. Push the repo to GitHub
 2. Go to **Settings → Pages**
 3. Set source to `main` branch, root `/`
-4. Your site will be live at `https://<username>.github.io/cachy-linux-cheatsheet`
+4. Your site will be live at `https://<username>.github.io/cachy-os-cheatsheet`
 
 > ⚠️ **Important:** The app uses ES Modules (`type="module"`), so it **cannot** be opened directly as a local file (`file://`). You need a local web server (see options above).
 
