@@ -195,6 +195,13 @@
           "codeHtml": "<span class='cmd-keyword'>paru</span> <span class='cmd-flag'>-Gc</span> <span class='cmd-arg'>&lt;package&gt;</span>",
           "descriptionHtml": "View AUR comments for a package (paru only).",
           "danger": false
+        },
+        {
+        "command": "yay --devel -Syu",
+        "searchDescription": "update aur git packages devel git-based",
+        "codeHtml": "<span class='cmd-keyword'>yay</span> <span class='cmd-flag'>--devel</span> <span class='cmd-flag'>-Syu</span>",
+        "descriptionHtml": "Updates AUR git-based packages (those ending in <span class='cmd-arg'>-git</span>) to their latest commit.",
+        "danger": false
         }
       ]
     },
