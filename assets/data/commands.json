@@ -853,13 +853,6 @@
           "codeHtml": "<span class='cmd-keyword'>sudo</span> systemctl <span class='cmd-flag'>enable --now</span> <span class='cmd-arg'>irqbalance</span>",
           "descriptionHtml": "Enable IRQ balancing across CPU cores for better performance.",
           "danger": false
-        },
-        {
-          "command": "sudo pacman -S cachy-browser",
-          "searchDescription": "install cachy browser firefox based",
-          "codeHtml": "<span class='cmd-keyword'>sudo</span> pacman <span class='cmd-flag'>-S</span> <span class='cmd-arg'>cachy-browser</span>",
-          "descriptionHtml": "Install Cachy Browser, a performance-optimized Firefox fork.",
-          "danger": false
         }
       ]
     },
