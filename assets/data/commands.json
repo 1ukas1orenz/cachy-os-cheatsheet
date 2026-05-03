@@ -360,7 +360,7 @@
           "danger": false
         },
         {
-          "command": "sudo systemctl reboot",
+          "command": "reboot",
           "searchDescription": "reboot restart system",
           "codeHtml": "<span class='cmd-keyword'>sudo</span> systemctl <span class='cmd-flag'>reboot</span>",
           "descriptionHtml": "Reboot the system immediately.",
