@@ -369,7 +369,7 @@
         {
           "command": "reboot",
           "searchDescription": "reboot restart system",
-          "codeHtml": "<span class='cmd-keyword'>sudo</span> systemctl <span class='cmd-flag'>reboot</span>",
+          "codeHtml": "<span class='cmd-keyword'>reboot</span>",
           "descriptionHtml": "Reboot the system immediately.",
           "danger": true
         },
